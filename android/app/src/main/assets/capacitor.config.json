@@ -1,0 +1,12 @@
+{
+	"appId": "com.biliktropis.rtxphysics",
+	"appName": "Bilik Tropis",
+	"webDir": "dist",
+	"android": {
+		"allowMixedContent": true,
+		"backgroundColor": "#141710"
+	},
+	"server": {
+		"androidScheme": "https"
+	}
+}

@@ -465,7 +465,11 @@ export function GameCanvas({
       sound.ensureStarted();
       if (e.button === 0) {
         if (document.pointerLockElement !== renderer.domElement && !isSoftwareGl) {
-          renderer.domElement.requestPointerLock?.();
+          try {
+            renderer.domElement.requestPointerLock?.();
+          } catch {
+            // Pointer lock may be unsupported in mobile/Android WebView
+          }
         }
         isDraggingLook = true;
         lastMouseX = e.clientX;
